@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: center;
 
-  #wrapper {
+  .wrapper {
     width: 350px;
     height: 397.66px;
     border: 1px solid lightgray;
@@ -19,7 +19,7 @@
     text-align: center;
 
     /* 로고 */
-    #logo {
+    .logo {
       font-family: Lobster, cursive;
       font-size: 40px;
       margin-top: 10px;
@@ -27,7 +27,7 @@
     }
 
     /* input */
-    #id, #pw {
+    .id, .pw {
       display: inline-block;
       width: 270px;
       height: 35px;
@@ -41,19 +41,23 @@
     }
 
     /* 로그인 버튼 */
-    #loginBtn {
+    .loginBtn {
       margin: 10px 0;
       width: 270px;
       padding: 10px;
-      background-color: #63b9e7;
       border: 0;
       border-radius: 10px;
       color: #fff;
       font-weight: bold;
+      background-color: #52d3fe;
       cursor: pointer;
     }
 
-    #miss {
+    .buttonLogin {
+      background-color: pink;
+    }
+
+    .miss {
       margin-top: 70px;
       font-size: 12px;
       font-weight: bold;
