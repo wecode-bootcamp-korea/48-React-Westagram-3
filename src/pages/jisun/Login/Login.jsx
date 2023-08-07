@@ -1,6 +1,7 @@
 import React from "react";
 import "./Login.scss";
 import { useNavigate } from "react-router-dom";
+import react, { useState } from "react";
 import "../../../style/reset.scss";
 
 const Login = () => {
@@ -10,12 +11,30 @@ const Login = () => {
     navigate("/jisun-main");
   };
 
+  const [id, setId] = useState("");
+  const [pw, setPw] = useState("");
+
+  const saveUserId = (event) => {
+    setId(event.target.value);
+    console.log(event);
+  };
+
+  const saveUserPw = (event) => {
+    setPw(event.target.value);
+  };
+
   return (
     <div className="login">
       <div className="box">
         <h1>Westagram</h1>
-        <input type="text" id="id" name="id" placeholder="전화번호, 사용자 이름 또는 이메일" />
-        <input type="text" id="pw" name="pw" placeholder="비밀번호" />
+        <input
+          type="text"
+          id="id"
+          value={id}
+          onChange={saveUserId}
+          placeholder="전화번호, 사용자 이름 또는 이메일"
+        />
+        <input type="text" id="pw" value={pw} onChange={saveUserPw} placeholder="비밀번호" />
         <button className="btnLogin" onClick={goToMain}>
           로그인
         </button>
