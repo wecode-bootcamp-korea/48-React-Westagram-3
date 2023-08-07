@@ -53,9 +53,6 @@ const Main = () => {
                   <p>canon_mj</p>
                 </div>
               </div>
-              <div className="article-head-right">
-                <div className="three-dots"></div>
-              </div>
             </div>
             <div className="article-image">
               <img src={profilephoto} />
