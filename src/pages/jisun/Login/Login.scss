@@ -91,6 +91,10 @@
       // }
     }
 
+    .btnLoginChange {
+      background: #2d94ef;
+    }
+
     .btnFacebook {
       padding-left: 24px;
       position: relative;
@@ -112,7 +116,6 @@
     }
 
     .err {
-      display: none;
       margin: 35px 0 10px;
       color: #ed4956;
       font-size: 14px;
@@ -123,7 +126,8 @@
       color: #375085;
       font-size: 12px;
       font-weight: 600;
-      text-decoration: none;
+      background: none;
+      border: none;
     }
   }
 
