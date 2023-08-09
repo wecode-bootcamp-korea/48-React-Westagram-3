@@ -1,0 +1,321 @@
+/* reset.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+img {
+  vertical-align: top;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  background-color: #fff;
+  font-size: 0.6rem;
+}
+
+/*------ .main(전체) -------*/
+.main {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  min-width: 780px;
+  max-width: 1100px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+/*----------- nav ------------*/
+  nav {
+    width: 84%;
+    height: 70px;
+    min-width: 660px;
+    line-height: 30px;
+    padding: 10px 10px;
+    padding-bottom: 20px;
+    position: fixed;
+    z-index: 100;
+    top:0px;
+    left: 6%;
+    margin: 0 auto;
+    background-color: #fff;
+  /* #navLeft */
+    #navLeft {
+      display: inline-block;
+
+      li {
+        font-weight: normal;
+        font-family: 'Lobster', cursive;
+        font-size: 30px;
+        display: inline-block;
+        margin: 0 5px;
+      }
+      img {
+        width: 35px;
+      }
+    }
+  /* #navSearch */
+    #navSearch {
+      display: inline-block;
+      position: absolute;
+      top:15px;
+      left: 35%;
+
+      input {
+        width: 250px;
+        padding: 5px;
+        background-color: #f7f7f7;
+        border: 1px solid #dbdbdb;
+        border-radius: 5px;
+        text-align: center;
+      }
+      img {
+        position: absolute;
+        width: 15px;
+        top:8px;
+        left:50%;
+        margin-left: -30px;
+      }
+    }
+  /* #navRight */
+    #navRight {
+      display: inline-block;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+
+      li{
+        display: inline-block;
+        padding: 0 5px;
+        margin: 0 5px;
+      }
+      
+      .naviRightImage {
+        img {
+          width: 30px;
+        }
+      }
+    } 
+  }
+
+/*------------ div #main ------------*/
+  #main {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 8rem 1rem 0 3rem;
+    display: flex;
+    flex-direction: row;
+
+    .feeds {
+      width: 100%;
+      height: 100%;
+    }
+      article {
+        width: 100%;
+        border: 1px solid lightgray;
+      }
+    /*--- userSection ---*/
+        #userSection {
+          padding: 10px;
+          position: relative;
+          line-height: 25px;
+          font-weight: bold;
+          img {
+            width: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+          }
+          .more {
+            width: 20px;
+            position: absolute;
+            top: 15px;
+            right: 5px;
+          }
+        }
+    /*--- #userImage ---*/
+        #userImage{
+          text-align: center;
+          border-top: 1px solid lightgray;
+          border-bottom: 1px solid lightgray;
+          img {
+          width: 350px;
+          }
+        }
+    /*--- #guestSection ---*/
+        #guestSection {
+      /* .clickLike */
+          .clickLike {
+            padding: 5px;
+            position: relative;
+            img {
+              width: 30px;
+              padding: 0 3px;
+            }
+            img:nth-child(4) {
+              position: absolute;
+              top:5px;
+              right: 5px;
+            }
+          }
+      /* .likeCount */
+          .likeCount {
+            padding: 5px 10px;
+            line-height: 18px;
+            img {
+              width: 18px;
+              border-radius: 50%;
+              margin-right: 10px;
+            }
+          }
+      /* .comment */
+          .comment {
+            padding: 5px 10px;
+            position: relative;
+            img {
+              width: 10px;
+              position: absolute;
+              top: 7px;
+              right: 10px;
+            }
+            img:nth-child(2) {
+              top: 20px;
+            }
+          }
+      /* .commentPush */
+          .commentPush {
+            position: relative;
+
+            input {
+              width: 100%;
+              padding: 15px 10px;
+              margin-top: 2px;
+              border: 0;
+              border-top: 1px solid lightgray;
+              font-size: 0.6rem;
+              outline: none;
+            }
+            button {
+              position: absolute;
+              bottom: 0px;
+              right: 0px;
+              padding: 14px;
+              border:0;
+              font-size: 0.6rem;
+              color: #78b8f4;
+              cursor: pointer;
+            }
+          }
+    /* #guestSection 공통 css */
+          .bold {
+            font-weight: bold;
+          }
+          .gray {
+            color: #c0c0c0;
+          }
+        }
+/*------------ .right ------------*/
+    .right {
+      width: 400px;
+      height: 500px;
+      margin: 0 3rem 0 2rem;
+      min-width: 250px;
+      font-weight: bold;
+  /* #myprofile 공통 css */
+      #myprofile {
+        padding: 5px 10px;
+        img {
+        width: 45px;
+        border-radius: 50%;
+        }
+        td:nth-child(2) {
+          padding-left: 5px;
+          }
+        }
+      
+  /* #story */
+      #story {
+        border: 1px solid lightgray;
+        width:100%;
+        overflow: hidden;
+        margin: 10px 0;
+        padding: 5px 10px;
+
+        img {
+        width: 30px;
+        border-radius: 50%;
+        padding: 1px;
+        border: 2px solid #e36ca7;
+        }
+    /* table 간격 & align 설정 */
+        th {
+          padding: 5px 0;
+        }
+        th:nth-child(2) {
+          text-align: right;
+        }
+
+        td {
+          padding: 3px 0;
+        }
+        td:nth-of-type(1) {
+          width: 15%;
+        }
+      }
+  /* #commend */
+      #commend {
+        border: 1px solid lightgray;
+        width:100%;
+        margin: 5px 0;
+        padding: 5px 10px;
+
+        img {
+          width:30px;
+          border-radius: 50%;
+        }
+    /* table 간격 & align 설정 */
+        th {
+          padding: 5px 0;
+        }
+        th:nth-child(2) {
+          text-align: right;
+        }
+
+        td {
+          padding: 3px 0;
+        }
+        td:nth-of-type(1) {
+          width: 15%;
+        }
+        td:nth-of-type(3) {
+          text-align: right;
+        }
+      }
+    /* table 속 공통 css */
+      .boldID {
+        font-weight: bold;
+      }
+      .gray {
+        color: #c0c0c0;
+          padding-left: 3px;
+          text-align: left;
+      }
+      .falow {
+        font-weight: bold;
+        color: #78b8f4;
+        cursor: pointer;
+      }
+  /* footer */
+      footer {
+        width: 90%;
+        margin-top: 10px;
+        color: lightgray;
+      }
+    }
+  }   
+}
