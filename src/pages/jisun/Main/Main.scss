@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+.main {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 790px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  nav {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+
+    .goHome {
+      display: flex;
+      align-items: center;
+
+      .logo {
+        margin: 0 10px 0 0;
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background: url(../../../assets/jisun/Main/icon_instagram.png) no-repeat;
+        background-size: contain;
+      }
+
+      p {
+        padding: 0 0 0 10px;
+        margin: 0;
+        position: relative;
+        display: inline-block;
+        font-family: "Lobster", cursive;
+        font-weight: 100;
+        font-size: 24px;
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 1px;
+          height: 30px;
+          background: #000;
+        }
+      }
+    }
+
+    .inputWrap {
+      text-align: center;
+
+      input[type="search"] {
+        padding: 0 22px;
+        width: 173px;
+        height: 22px;
+        background: url("https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png")
+          left 0.5em center no-repeat;
+        background-size: 14px 14px;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        font-size: 10px;
+        text-align: left;
+      }
+
+      input:focus[type="search"] {
+        line-height: 22px;
+        background: none;
+        outline: none;
+      }
+    }
+
+    .icons {
+      display: flex;
+      flex-direction: row;
+
+      button {
+        padding: 0 20px;
+        width: 20px;
+        height: 20px;
+        box-sizing: border-box;
+        border: none;
+        background-color: none;
+      }
+
+      button.on {
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          left: 8px;
+          bottom: -8px;
+          width: 4px;
+          height: 4px;
+          border-radius: 2px;
+          background: #ff0000;
+        }
+      }
+
+      .iconCompass {
+        background: url(../../../assets/jisun/Main/icon_compass.png) no-repeat;
+        background-size: contain;
+      }
+
+      .iconLike {
+        background: url(../../../assets/jisun/Main/icon_heart.png) no-repeat;
+        background-size: contain;
+      }
+
+      .iconMypage {
+        padding-right: 0;
+        background: url(../../../assets/jisun/Main/icon_user.png) no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  .contentsWrap {
+    padding: 0 12px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+
+    .feeds {
+      flex: 2;
+
+      .moreMenu {
+        img {
+          width: 20px;
+          vertical-align: middle;
+        }
+      }
+
+      .image {
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .text {
+        .buttons {
+          padding: 10px 0;
+          display: flex;
+          flex-direction: row;
+          height: 20px;
+
+          span {
+            width: 30px;
+            box-sizing: border-box;
+          }
+
+          .like {
+            background: url(../../../assets/jisun/Main/icon_heart.png) left center no-repeat;
+            background-size: 20px auto;
+          }
+
+          .like.on {
+            background: url(../../../assets/jisun/Main/icon_heart_red.png) left center no-repeat;
+            background-size: 20px auto;
+          }
+          .dm {
+            background: url(../../../assets/jisun/Main/icon_chat.png) left center no-repeat;
+            background-size: 18px auto;
+          }
+
+          .share {
+            background: url(../../../assets/jisun/Main/icon_share.png) left center no-repeat;
+            background-size: 22px auto;
+          }
+
+          .bookMark {
+            flex: 1;
+            background: url(../../../assets/jisun/Main/icon_save.png) right center no-repeat;
+            background-size: 18px auto;
+          }
+        }
+
+        .likedStatus {
+          margin-bottom: 10px;
+
+          .accountPicture {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+          }
+        }
+
+        .mention .viewMore {
+          margin-left: 10px;
+          color: #959595;
+        }
+
+        .addComments {
+          margin-top: 10px;
+          align-items: center;
+          display: flex;
+          flex-direction: row;
+          border-top: 1px solid #eee;
+
+          textarea {
+            padding: 20px 5px 10px 5px;
+            width: 100%;
+            height: 18px;
+            border: 0;
+          }
+        }
+      }
+    }
+
+    .mainRight {
+      margin-left: 30px;
+      flex: 1;
+
+      .accountName {
+        display: block;
+      }
+
+      .myAccount {
+        margin-bottom: 10px;
+      }
+
+      .accountWrap {
+        .accountPicture {
+          width: 38px;
+          height: 38px;
+        }
+
+        span {
+          color: #999;
+        }
+      }
+
+      .recommandList {
+        div {
+          display: flex;
+          justify-content: space-between;
+
+          span {
+            font-size: 12px;
+            font-weight: 600;
+          }
+
+          .viewAll {
+            color: #000;
+            text-align: center;
+          }
+
+          .follow {
+            flex-basis: 14%;
+            color: #3997f0 !important;
+          }
+
+          strong {
+            flex: 4;
+            color: #999;
+            font-size: 14px;
+          }
+        }
+
+        .accountWrap {
+          margin: 10px 0;
+          justify-content: space-between;
+
+          .accountPicture {
+            margin-right: 0;
+            padding-right: 10px;
+            flex-basis: 15%;
+          }
+
+          span {
+            .accountName {
+              font-size: 13px;
+            }
+          }
+          span:first-of-type {
+            padding-right: 10px;
+            flex-basis: 72%;
+          }
+        }
+      }
+    }
+  }
+}
+
+//공통
+.accountWrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 45px;
+}
+
+.accountPicture {
+  margin-right: 10px;
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+}
+
+.accountPicture img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.accountName {
+  flex-grow: 1;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.mr5 {
+  margin-right: 5px;
+}
