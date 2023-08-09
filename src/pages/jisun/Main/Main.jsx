@@ -1,7 +1,6 @@
 import React from "react";
 import "./Main.scss";
 import { Link, useNavigate } from "react-router-dom";
-import "../../../style/reset.scss";
 
 const Main = () => {
   const navigate = useNavigate();
@@ -21,9 +20,9 @@ const Main = () => {
           <input type="search" placeholder="검색" />
         </div>
         <div className="icons">
-          <a href="" className="icon1"></a>
-          <a href="" className="icon2 on"></a>
-          <a href="" className="icon3"></a>
+          <button className="iconCompass"></button>
+          <button className="iconLike on"></button>
+          <button className="iconMypage"></button>
         </div>
       </nav>
       <div className="contentsWrap">
@@ -31,7 +30,7 @@ const Main = () => {
           <article>
             <div className="accountWrap">
               <a className="accountPicture">
-                <img alt="계정 프로필 사진" src="../../../../images/jisun/img_profile.png" />
+                <img alt="계정 프로필 사진" src="/images/jisun/img_profile.png" />
               </a>
               <a className="accountName">hanccino</a>
               <a className="moreMenu">

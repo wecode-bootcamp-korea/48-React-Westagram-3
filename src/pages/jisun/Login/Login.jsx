@@ -1,45 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.scss";
-import "../../../style/reset.scss";
 
 const Login = () => {
   const navigate = useNavigate();
-  //const [userId, setUserId] = useState(""); //string
-  //const [userPw, setUserPw] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
-  const [isActive, setIsActive] = useState(false);
 
   const [userInfo, setUserInfo] = useState({
     userId: "",
     userPw: "",
   });
 
-  useEffect(() => {
-    const condition = userInfo.userId.length >= 5 && userInfo.userId.includes("@");
-    setIsActive(condition);
-  }, [userInfo]);
+  const isActive = userInfo.userPw.length >= 5 && userInfo.userId.includes("@");
 
-  console.log(userInfo);
-
-  const handleId = (event) => {
-    //setUserId(event.target.value);
-    const { value } = event.target;
-    setUserInfo({ ...userInfo, userId: value }); // 스프레드 연산자. 특정 대상의 코드를 분해함.
-  };
-
-  const handlePw = (event) => {
-    //setUserPw(event.target.value);
-    const { value } = event.target;
-    setUserInfo({ ...userInfo, userPw: value });
-  };
+  useEffect(() => {}, [userInfo, showErrorMessage]);
 
   const handleInput = (event) => {
     const { value, id } = event.target;
-    setUserInfo({ ...userInfo, [id]: value }); // [계속해서 변하는 객체 속성명] 대괄호 안에 계속해서 변하는 객체의 속성명 넣어주는 것을 계산된 속성명이라고 한다
+    setUserInfo({ ...userInfo, [id]: value });
   };
-
-  console.log(userInfo.length);
 
   const goToMain = () => {
     if (isActive) {
@@ -59,11 +38,10 @@ const Login = () => {
           onChange={handleInput}
           placeholder="전화번호, 사용자 이름 또는 이메일"
         />
-        <input type="text" id="userPw" onChange={handleInput} placeholder="비밀번호" />
+        <input type="password" id="userPw" onChange={handleInput} placeholder="비밀번호" />
         <button
           className="btnLogin"
           onClick={goToMain}
-          //disabled={!isActive}
           style={{ backgroundColor: isActive ? "#2d94ef" : "#67b5fa" }}
         >
           로그인
