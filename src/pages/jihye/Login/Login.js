@@ -10,7 +10,7 @@ const Login = () => {
   const inputValue = id.includes('@') && pw.length >=5
 
   console.log(inputValue)
- 
+
   const saveUserld = (event) => {
     setId(event.target.value);  
   }
@@ -31,7 +31,9 @@ const Login = () => {
         </div>
         <button
           onClick={() => { navigate("/jihye-main") }} 
-          className= { inputValue ? 'loginBtn buttonLogin' : 'loginBtn'}>로그인</button>
+          className= { inputValue ? 'loginBtn buttonLogin' : 'loginBtn'}
+          disabled= {!inputValue}>로그인
+        </button>
         <div className='miss'>비밀번호를 잊으셨나요?</div>
       </div>
     </div>
